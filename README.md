@@ -26,7 +26,7 @@ for (int i = 0; i < 10; i++) {
 	for (int j = 0; j < 10; j++) {
 		myExpr.variables["x"] = i;
 		myExpr.variables["y"] = j;
-		std::cout << test.solve() << "\n";
+		std::cout << myExpr.solve() << "\n";
 	}
 }
 ```
