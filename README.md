@@ -3,9 +3,13 @@
  A performant multivariable recursive descent parser for math expressions , supporting all simple operations and several common functions including sin, cos, tan, abs, exp, log, and sqrt. Allows for very easy expansion of function support. Uses the following grammar:
 
 **e**xpression = t + e | t - e | t
+
 **t**erm = t \* f | t / f | f
+
 **f**actor = f ^ p | p
+
 **p**ower = function(v) | variable | v
+
 **v**alue = literal | (e)
 
 
