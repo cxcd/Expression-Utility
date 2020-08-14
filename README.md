@@ -28,10 +28,10 @@ Here is an example of solving a function while updating its variables:
 ```
 ExpressionUtil::ExpressionFloat myExpr("sin(x) * cos(y)");
 for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
-			myExpr.variables["x"] = i;
-			myExpr.variables["y"] = j;
-			std::cout << test.solve() << "\n";
-		}
+	for (int j = 0; j < 10; j++) {
+		myExpr.variables["x"] = i;
+		myExpr.variables["y"] = j;
+		std::cout << test.solve() << "\n";
+	}
 }
 ```
