@@ -60,7 +60,7 @@ namespace ExpressionUtil {
 		// Peek next token, bounds check
 		typename Token peek();
 
-		// [v]alue = constant | (e)
+		// [v]alue = literal | (e)
 		T parseValue();
 		// [p]ower = function(v) | variable | v
 		T parsePower();
