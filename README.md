@@ -1,6 +1,6 @@
 # Expression-Utility
 
- A performant multivariable recursive descent parser for math expressions , supporting all simple operations and several common functions including sin, cos, tan, abs, exp, log, and sqrt. Allows for very easy expansion of function support. Uses the following grammar:
+A performant multivariable recursive descent parser for math expressions, supporting all simple operations and several common functions including sin, cos, tan, abs, exp, log, and sqrt. Allows for very easy expansion of function support. Uses the following grammar:
 
 **e**xpression = t + e | t - e | t  
 **t**erm = t \* f | t / f | f  
@@ -35,3 +35,5 @@ for (int i = 0; i < 10; i++) {
 	}
 }
 ```
+## Adding extra functions
+Inside the header is the variable `std::unordered_map<std::string, FnPtr> funcMap`. Functions are simply defined as a relation between a string and a function pointer `typedef T(*FnPtr)(T);`. To add more functions, simply add a new line to the instantiation, e.g. `{"acos", acos}` will add support for arccosine by parsing `acos` as a call to the function of the same name. Adding custom functions can be done this way as well, e.g.`{"degToRad", degToRad}` where `degToRad()` is a user defined function that converts degrees to radians.
