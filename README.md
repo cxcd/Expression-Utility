@@ -20,7 +20,8 @@ myExprFloat.variables["x"] = 5;
 ```
 From here, it is as simple as calling `solve()` on the object. This returns a solution of the objects type, either a float or a double:
 ```
-float solution = myExprFloat.solve();
+float solutionFloat = myExprFloat.solve();
+double solutionDouble = myExprFouble.solve();
 ```
 
 Here is an example of solving a function while updating its variables:
