@@ -1,4 +1,4 @@
-# Expression-Utility
+# Expression Utility
 
 A performant multivariable recursive descent parser for math expressions, supporting all simple operations and several common functions including sin, cos, tan, abs, exp, log, and sqrt. Allows for very easy user expansion of the supported functions.
 
