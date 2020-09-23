@@ -13,7 +13,7 @@ Alternatively you can construct the object without setting an expression, and se
 ExpressionUtil::ExpressionFloat myExprFloat(); 
 myExprFloat.set("sin(x) * cos(y)");
 ```
-The function `set()` can be used to reset the expression of an already constructed object if desired. When the expression is set, it is stripped of white space, made lowercase, and tokenized. Variables can be any length. If your expression includes variables, update the variables like so:
+The function `set()` can be used to reset the expression of an already constructed object if desired. When the expression is set (via constructor or `set()`), it is stripped of white space, made lowercase, and tokenized. Variables can be any length. If your expression includes variables, update the variables like so:
 ```
 myExprFloat.variables["x"] = 5;
 myExprFloat.variables["myvariable"] = 5;
