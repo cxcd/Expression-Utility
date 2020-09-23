@@ -8,7 +8,12 @@ Add both files to your project, and include the header in the relevant file. The
 ExpressionUtil::ExpressionFloat myExprFloat("sin(x) * cos(y)"); 
 ExpressionUtil::ExpressionDouble myExprDouble("sin(x) * cos(y)");
 ```
-On construction the expression is stripped of white space, made lowercase, and tokenized. Variables can be any length. If your expression includes variables, update the variables like so:
+Alternatively you can construct the object without setting an expression, and set it later:
+```
+ExpressionUtil::ExpressionFloat myExprFloat(); 
+myExprFloat.set("sin(x) * cos(y)");
+```
+The function `set()` can be used to reset the expression of an already constructed object if desired. When the expression is set, it is stripped of white space, made lowercase, and tokenized. Variables can be any length. If your expression includes variables, update the variables like so:
 ```
 myExprFloat.variables["x"] = 5;
 myExprFloat.variables["myvariable"] = 5;
