@@ -79,9 +79,16 @@ namespace ExpressionUtil {
 		// Associate a variable with a value
 		// e.g. expr.variables["x"] = 4;
 		std::unordered_map<std::string, T> variables = { {"pi", pi} };
+		
 		// Construct expression
 		// e.g. ExpressionUtil::ExpressionFloat expr("x^2/sin(2*pi/y)-x/2");
 		Expression(std::string expression);
+		// Basic Constructor
+		Expression();
+		
+		// Set the expression
+		void set(std::string expression);
+		
 		// Solve expression
 		T solve();
 	};

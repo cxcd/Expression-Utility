@@ -260,6 +260,19 @@ namespace ExpressionUtil {
 	// e.g. ExpressionUtil::ExpressionFloat expr("x^2/sin(2*pi/y))-x/2");
 	template <typename T>
 	Expression<T>::Expression(std::string expression) {
+		set(expression);
+	}
+	// Basic Constructor
+	template <typename T>
+	Expression<T>::Expression() {}
+
+	// Set the expression
+	template <typename T>
+	void Expression<T>::set(std::string expression) {
+		literals.clear();
+		strings.clear();
+		tokens.clear();
+		//
 		expressionString = expression;
 		// Remove all white space
 		expressionString.erase(remove_if(expressionString.begin(), expressionString.end(), isspace), expressionString.end());
@@ -272,6 +285,7 @@ namespace ExpressionUtil {
 			std::cout << e.what() << "\n";
 		}
 	}
+
 	// Solve expression
 	template <typename T>
 	T Expression<T>::solve() {
