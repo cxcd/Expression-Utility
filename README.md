@@ -5,12 +5,12 @@ A performant multivariable recursive descent parser for math expressions, suppor
 ## Usage
 Add both files to your project, and include the header in the relevant file. Then, create an object of the desired type like so:
 ```
-ExpressionUtil::ExpressionFloat myExprFloat("sin(x) * cos(y)"); 
-ExpressionUtil::ExpressionDouble myExprDouble("sin(x) * cos(y)");
+ExprUtil::ExprFloat myExprFloat("sin(x) * cos(y)"); 
+ExprUtil::ExprDouble myExprDouble("sin(x) * cos(y)");
 ```
 Alternatively you can construct the object without setting an expression, and set it later:
 ```
-ExpressionUtil::ExpressionFloat myExprFloat(); 
+ExprUtil::ExprFloat myExprFloat(); 
 myExprFloat.set("sin(x) * cos(y)");
 ```
 The function `set()` can be used to reset the expression of an already constructed object if desired. When the expression is set (via constructor or `set()`), it is stripped of white space, made lowercase, and tokenized. Variables can be any length. If your expression includes variables, update the variables like so:
@@ -26,7 +26,7 @@ double solutionDouble = myExprFouble.solve();
 
 Here is an example of solving a function while updating its variables:
 ```
-ExpressionUtil::ExpressionFloat myExpr("sin(x) * cos(y)");
+ExprUtil::ExprFloat myExpr("sin(x) * cos(y)");
 for (int i = 0; i < 10; i++) {
 	for (int j = 0; j < 10; j++) {
 		myExpr.variables["x"] = i;
