@@ -55,7 +55,7 @@ namespace ExprUtil {
 				// If this is a function, execute associated function
 				typename std::unordered_map<std::string, FnPtr>::iterator iterF = funcMap.find(strings[indexStr++]);
 				if (iterF == funcMap.end()) {
-					throw std::runtime_error("ERROR::EXPRUTIL: Function " + strings[indexStr] + " does not exist.");
+					throw std::runtime_error("ERROR::EXPRUTIL: Function " + strings[indexStr - 1] + " does not exist.");
 				} else {
 					value = iterF->second(parseValue());
 				}
@@ -321,7 +321,7 @@ namespace ExprUtil {
 	Expression<T>::Expression() {}
 
 	// Constructor that sets expression
-	// e.g. EXPRUTIL::ExpressionFloat expr("x^2/sin(2*pi/y))-x/2");
+	// e.g. ExprUtil::ExpressionFloat expr("x^2/sin(2*pi/y))-x/2");
 	template <typename T>
 	Expression<T>::Expression(std::string expression) {
 		set(expression);

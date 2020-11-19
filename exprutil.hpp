@@ -88,7 +88,7 @@ namespace ExprUtil {
 		// Constructor
 		Expression();
 		// Constructor that sets expression
-		// e.g. ExpressionUtil::ExpressionFloat expr("x^2/sin(2*pi/y)-x/2");
+		// e.g. ExprUtil::ExpressionFloat expr("x^2/sin(2*pi/y)-x/2");
 		Expression(std::string expression);
 	};
 
